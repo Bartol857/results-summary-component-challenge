@@ -1,0 +1,54 @@
+@media (min-width: 992px) {
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+        height: 90vh;
+	}
+
+	.box {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 700px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 20px -15px $darkgrayblue;
+        overflow: hidden;
+
+        &__result {
+            padding: 2rem 3rem;
+            height: 100%;
+            border-radius: 25px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+    
+        &__circle {
+            padding: 2.5rem;
+            width: 200px;
+            height: 200px;
+            font-size: 18px;
+
+            span {
+                font-size: 76px;
+            }
+        }
+    
+        &__info {
+            font-size: 32px;
+        }
+    
+        &__description {
+            font-size: 18px;
+        }
+
+        &__name {
+            font-size: 24px;
+        }
+
+        &__reaction, &__memory, &__verbal, &__visual {
+            font-size: 18px;
+        }
+	}
+}

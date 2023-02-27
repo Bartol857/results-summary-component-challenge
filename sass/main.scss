@@ -1,0 +1,153 @@
+@use './components' as *;
+
+@font-face {
+	font-family: 'HankenGrotesk';
+	src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'HankenGrotesk', sans-serif;
+	font-size: 18px;
+}
+
+.box {
+    &__result {
+        padding: 1rem 3rem;
+		height: 40%;
+		text-align: center;
+		background-image: $backgroundgradient;
+        color: $paleblue;
+        border-radius: 0 0 40px 40px;
+	}
+
+	&__title {
+		font-size: 18px;
+		color: $lightlavender;
+	}
+
+	&__circle {
+		margin: 2rem auto;
+		padding: 1.5rem;
+		width: 140px;
+		height: 140px;
+		font-size: 16px;
+		font-weight: bold;
+		background-image: $circlegradient;
+		color: $lightlavender;
+		border-radius: 50%;
+
+		span {
+			font-size: 54px;
+			color: $white;
+		}
+	}
+
+    &__info {
+        font-size: 24px;
+    }
+
+    &__description {
+        padding: 1rem 0;
+        font-size: 16px;
+        color: $lightlavender;
+        font-weight: 500;
+    }
+
+    &__summary {
+        padding: 2rem;
+        color: $darkgrayblue;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    &__name {
+        font-size: 18px;
+        color: $darkgrayblue;
+    }
+    &__abilities{
+        padding: 1rem 0;
+    }
+
+    &__reaction, &__memory, &__verbal, &__visual {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+        padding: 1rem;
+        width: 100%;
+        background-color: $verylightred;
+        border-radius: 10px;
+
+        img, span {
+            margin-right: .5rem;
+        }
+    }
+
+    &__reaction {
+        background-color: $verylightred;
+        color: $lightred;
+    }
+    &__memory {
+        background-color: $lightorangeyyellow;
+        color: $orangeyyellow;
+    }
+    &__verbal {
+        background-color: $lightgreenteal;
+        color: $greenteal;
+    }
+    &__visual {
+        background-color: $lightcobaltblue;
+        color: $cobaltblue;
+    }
+
+    &__blockname, &__score {
+        display: flex;
+        align-items: center;
+    }
+
+    &__score {
+        color: $darklavender;
+
+        span {
+            color: $darkgrayblue;
+        }
+    }
+
+    &__btn {
+        margin-top: 1rem;
+        width: 100%;
+        height: 60px;
+        font-family: 'HankenGrotesk', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        background: $darkgrayblue;
+        color: $paleblue;
+        border: none;
+        border-radius: 35px;
+        cursor: pointer;
+
+        &:hover {
+            background: $backgroundgradient;
+        }
+    }
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+
+	a {
+		color: $lightred;
+	}
+}
+
+@import './desktop';
